@@ -9,11 +9,19 @@ import UIKit
 
 class NewsListTableViewController: UITableViewController {
 
-    private var articleListVM: ArticleListViewModel!
+    var articleListVM: ArticleListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        //change TVC background and text color including status bar
+        let appearance = UINavigationBarAppearance()
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.backgroundColor = UIColor(red: 52/255, green: 78/255, blue: 65/255, alpha: 1.0)
+        self.navigationItem.standardAppearance = appearance
+        self.navigationItem.scrollEdgeAppearance = appearance
     }
 
     private func setup() {
@@ -49,7 +57,7 @@ class NewsListTableViewController: UITableViewController {
             fatalError("ArticleTableViewCell not found")
         }
 
-        let articleVM = articleListVM.articleAtIndex(indexPath.row)
+        let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
         
         cell.titleLabel.text = articleVM.title
         cell.descriptionLabel.text = articleVM.description

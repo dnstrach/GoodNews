@@ -17,6 +17,7 @@
 		D89906B72A42ACD0001B0A0D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89906B62A42ACD0001B0A0D /* Article.swift */; };
 		D89906BC2A42AFDA001B0A0D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89906BB2A42AFDA001B0A0D /* ArticleViewModel.swift */; };
 		D89906BF2A42B230001B0A0D /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89906BE2A42B230001B0A0D /* ArticleTableViewCell.swift */; };
+		D8CD8D722A4CC3060009DC26 /* NewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD8D712A4CC3060009DC26 /* NewsArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D89906B62A42ACD0001B0A0D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D89906BB2A42AFDA001B0A0D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		D89906BE2A42B230001B0A0D /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D8CD8D712A4CC3060009DC26 /* NewsArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D89906B02A42A55F001B0A0D /* NewsListTableViewController.swift */,
+				D8CD8D712A4CC3060009DC26 /* NewsArticleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				D899069C2A42A512001B0A0D /* AppDelegate.swift in Sources */,
 				D89906B12A42A55F001B0A0D /* NewsListTableViewController.swift in Sources */,
+				D8CD8D722A4CC3060009DC26 /* NewsArticleViewController.swift in Sources */,
 				D89906B42A42AA9A001B0A0D /* Webservice.swift in Sources */,
 				D89906BC2A42AFDA001B0A0D /* ArticleViewModel.swift in Sources */,
 				D89906B72A42ACD0001B0A0D /* Article.swift in Sources */,
