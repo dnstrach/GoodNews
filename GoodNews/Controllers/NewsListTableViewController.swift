@@ -64,5 +64,21 @@ class NewsListTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "toArticleDetailView" {
+            
+            guard let destination = segue.destination as? NewsArticleViewController else {
+                fatalError("NewsArticleViewController not found") }
+
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+
+            destination.article = articleListVM.articleAtIndex(indexPath.row)
+
+
+        }
+
+    }
 
 }

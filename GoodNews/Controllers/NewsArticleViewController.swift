@@ -7,23 +7,20 @@
 
 import UIKit
 
-protocol ArticleViewDelegate {
-    func articleView(vm: ArticleViewModel)
-}
-
 class NewsArticleViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    var article: ArticleListViewModel?
-    //var delegate: ArticleViewDelegate?
+    var article: ArticleViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navBarDesign()
         
+        titleLabel.text = article?.title
+        descriptionLabel.text = article?.description
     }
     
     func navBarDesign() {
@@ -33,6 +30,11 @@ class NewsArticleViewController: UIViewController {
         appearance.backgroundColor = UIColor(red: 52/255, green: 78/255, blue: 65/255, alpha: 1.0)
         self.navigationItem.standardAppearance = appearance
         self.navigationItem.scrollEdgeAppearance = appearance
+    }
+    
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
