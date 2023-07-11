@@ -11,6 +11,11 @@ class NewsArticleViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionScrollView: UIScrollView!
+    
+    @IBOutlet weak var articleImageView: UIImageView!
+    @IBOutlet weak var linkToArticleLabel: UILabel!
+    
     
     var article: ArticleViewModel?
     
@@ -20,7 +25,11 @@ class NewsArticleViewController: UIViewController {
         navBarDesign()
         
         titleLabel.text = article?.title
-        descriptionLabel.text = article?.description
+        descriptionLabel.text = article?.description ?? ""
+        //description scroll view??
+        articleImageView.load(article: article?.urlToImage ?? "")
+        //hyperlink
+        //linkToArticleLabel.url = article?.url
     }
     
     func navBarDesign() {

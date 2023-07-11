@@ -38,10 +38,18 @@ extension ArticleViewModel {
 
 extension ArticleViewModel {
     var title: String {
-        return self.article.title
+        return self.article.title ?? ""
     }
     
     var description: String {
-        return self.article.description
+        return self.article.description ?? ""
+    }
+    
+    var urlToImage: String {
+        return self.article.urlToImage ?? ""
+    }
+    
+    var url: String {
+        return self.article.url ?? ""
     }
 }

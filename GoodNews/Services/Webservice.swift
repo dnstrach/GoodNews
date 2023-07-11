@@ -18,7 +18,6 @@ class Webservice {
                 print(error.localizedDescription)
                 completion(nil)
             } else if let data = data {
-                
                 do {
                     let articles = try JSONDecoder().decode(ArticleList.self, from: data).articles
                     
@@ -29,7 +28,7 @@ class Webservice {
                 }
             }
             
-            //print(data)
+            print(data)
             
         }.resume()
         
